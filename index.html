@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gunjan Vishwakarma | Software Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Gunjan Vishwakarma — Software Developer specializing in React.js, Next.js, modern JavaScript, Tailwind CSS, and scalable REST API integrations." />
+  <meta name="keywords" content="Gunjan Vishwakarma, Software Developer, Frontend Engineer, React.js, Next.js, JavaScript, Tailwind CSS, Portfolio, Pune India" />
+  <meta name="author" content="Gunjan Vishwakarma" />
+
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="Gunjan Vishwakarma | Software Developer Portfolio" />
+  <meta property="og:description" content="Explore projects, core skills, professional experience, and education of Gunjan Vishwakarma, Software Developer." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+
+  <!-- Background Decorative Grid & Blobs -->
+  <div class="bg-pattern" aria-hidden="true"></div>
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" aria-label="Gunjan Vishwakarma Home">
+        <span class="logo-badge">&lt;GV/&gt;</span>
+        <span class="logo-text">Gunjan<strong>.dev</strong></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Actions: Theme Toggle & Resume CTA -->
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle Theme">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's Talk</a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-down Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="#about" class="mobile-nav-link"><i class="fa-regular fa-user"></i> About</a></li>
+      <li><a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+      <li><a href="#experience" class="mobile-nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+      <li><a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-layer-group"></i> Projects</a></li>
+      <li><a href="#education" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#certifications" class="mobile-nav-link"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+      <li><a href="#contact" class="mobile-nav-link"><i class="fa-regular fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="#contact" class="btn btn-primary btn-block">Get In Touch</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="status-pill animate-fade-in">
+            <span class="status-dot"></span>
+            <span>Open for Frontend & Software Developer Roles</span>
+          </div>
+
+          <h1 class="hero-title animate-slide-up">
+            Hi, I'm <span class="highlight-text">Gunjan Vishwakarma</span>
+            <span class="hero-subtitle-wrapper">
+              <span class="typing-prefix">I build </span>
+              <span class="typing-text" id="typewriter"></span>
+              <span class="cursor">&nbsp;</span>
+            </span>
+          </h1>
+
+          <p class="hero-description animate-slide-up delay-1">
+            Software Developer with hands-on experience building responsive, production user interfaces with <strong>React.js</strong> and <strong>Next.js</strong>. Focused on translating designs into reusable, performant components, integrating REST APIs, and writing clean modern code.
+          </p>
+
+          <div class="hero-cta-group animate-slide-up delay-2">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Contact Me</span>
+            </a>
+            <a href="mailto:gunjanvishwakarma418@gmail.com" class="btn btn-outline" id="resume-download-btn" title="Send Email for Resume">
+              <i class="fa-solid fa-file-lines"></i>
+              <span>Get Resume</span>
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-socials animate-slide-up delay-3">
+            <span class="socials-label">Connect:</span>
+            <a href="https://github.com/Gunjan-Vishwakarma/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/gunjan-vishwakarma09/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:gunjanvishwakarma418@gmail.com" class="social-icon" aria-label="Email Gunjan">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="tel:+918788446929" class="social-icon" aria-label="Call Gunjan">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Avatar Card -->
+        <div class="hero-visual animate-fade-in delay-2">
+          <div class="avatar-card">
+            <div class="avatar-ring">
+              <div class="avatar-inner">
+                <!-- SVG Vector Avatar with Modern Styling -->
+                <div class="dev-avatar">
+                  <div class="avatar-graphic">
+                    <i class="fa-solid fa-laptop-code code-symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="floating-badge badge-top-right">
+              <div class="badge-icon"><i class="fa-brands fa-react"></i></div>
+              <div class="badge-text">
+                <span class="badge-title">React & Next.js</span>
+                <span class="badge-desc">Modern Frontend</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div class="badge-text">
+                <span class="badge-title">REST APIs & JWT</span>
+                <span class="badge-desc">Secure Integration</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-center-right">
+              <div class="badge-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="badge-text">
+                <span class="badge-title">Pune, India</span>
+                <span class="badge-desc">Available to Join</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down-btn" aria-label="Scroll to About Section">
+        <span class="mouse-icon"><span class="wheel"></span></span>
+        <span class="scroll-text">Scroll Down</span>
+      </a>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Passionate About Creating Impactful Web Experiences</h2>
+          <p class="section-subtitle">Bridging user-centric design and performant web technologies.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-story-card">
+            <h3 class="card-heading">Frontend-focused Software Developer with real-world production experience.</h3>
+            <p class="text-body">
+              I am a Software Developer based in <strong>Pune, India</strong> with hands-on experience in building responsive, production user interfaces using <strong>React.js</strong> and <strong>Next.js</strong>.
+            </p>
+            <p class="text-body">
+              Currently contributing to the frontend of <strong>Mahir Screener</strong>, a live stock market analysis platform (Fintech), translating complex financial data into interactive charts, tables, and reusable components integrated with REST APIs.
+            </p>
+            <p class="text-body">
+              I have a solid grasp of modern JavaScript (ES6+), Tailwind CSS, Context API state management, and Git-based collaborative workflows. I hold an MCA degree and am eager to apply and grow my skills as a Frontend / Software Engineer.
+            </p>
+
+            <div class="about-features">
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-brands fa-react"></i></div>
+                <div>
+                  <h4>Component-Based Architecture</h4>
+                  <p>Building modular, reusable, and maintainable UI components in React and Next.js.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <div>
+                  <h4>API Integration & Security</h4>
+                  <p>Seamlessly connecting frontend views with backend REST APIs using JWT authentication.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <div>
+                  <h4>Responsive & Pixel-Perfect Design</h4>
+                  <p>Delivering mobile-first layouts with Tailwind CSS, ensuring smooth user experience across all devices.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats-column">
+            <!-- Stat Card 1 -->
+            <div class="stat-card">
+              <div class="stat-number" data-target="2">0</div>
+              <span class="stat-plus">+</span>
+              <p class="stat-label">Internship Experiences</p>
+              <span class="stat-note">Fintech & AI Technologies</span>
+            </div>
+
+            <!-- Stat Card 2 -->
+            <div class="stat-card">
+              <div class="stat-number" data-target="100">0</div>
+              <span class="stat-plus">%</span>
+              <p class="stat-label">Responsive Designs</p>
+              <span class="stat-note">Mobile-first & Accessible</span>
+            </div>
+
+            <!-- Stat Card 3 -->
+            <div class="stat-card">
+              <div class="stat-number" data-target="10">0</div>
+              <span class="stat-plus">+</span>
+              <p class="stat-label">Core Tech Proficiencies</p>
+              <span class="stat-note">React, Next.js, Node, SQL</span>
+            </div>
+
+            <!-- Stat Card 4 -->
+            <div class="stat-card">
+              <div class="stat-number" data-target="1">0</div>
+              <span class="stat-plus"> Live</span>
+              <p class="stat-label">Fintech Platform</p>
+              <span class="stat-note">Mahir Screener in Production</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Skills Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Technical Arsenal</span>
+          <h2 class="section-title">Core Skills & Technologies</h2>
+          <p class="section-subtitle">A comprehensive breakdown of my development stack, libraries, and workflows.</p>
+        </div>
+
+        <!-- Skill Category Cards Grid -->
+        <div class="skills-grid">
+          <!-- Category 1: Frontend Development -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-frontend"><i class="fa-brands fa-react"></i></div>
+              <div>
+                <h3>Frontend Development</h3>
+                <p>Modern, performant, and reactive user interfaces</p>
+              </div>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fa-brands fa-react"></i> React.js</span>
+              <span class="skill-pill"><i class="fa-solid fa-atom"></i> Next.js</span>
+              <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+              <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              <span class="skill-pill"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+              <span class="skill-pill"><i class="fa-solid fa-mobile-screen"></i> Responsive Web Design</span>
+              <span class="skill-pill"><i class="fa-solid fa-cubes"></i> Component Architecture</span>
+              <span class="skill-pill"><i class="fa-solid fa-chart-line"></i> SEO Best Practices</span>
+              <span class="skill-pill"><i class="fa-solid fa-arrows-split-up-and-left"></i> Context API</span>
+            </div>
+          </div>
+
+          <!-- Category 2: API Integration & Backend -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-backend"><i class="fa-solid fa-network-wired"></i></div>
+              <div>
+                <h3>API Integration & Backend</h3>
+                <p>Data orchestration, authentication, and server endpoints</p>
+              </div>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fa-solid fa-plug"></i> REST APIs</span>
+              <span class="skill-pill"><i class="fa-solid fa-key"></i> JWT Authentication</span>
+              <span class="skill-pill"><i class="fa-solid fa-arrows-rotate"></i> CRUD Operations</span>
+              <span class="skill-pill"><i class="fa-brands fa-node"></i> Node.js</span>
+              <span class="skill-pill"><i class="fa-solid fa-server"></i> Express.js</span>
+              <span class="skill-pill"><i class="fa-solid fa-shield-halved"></i> Secured Endpoints</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Databases & Data Stores -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-database"><i class="fa-solid fa-database"></i></div>
+              <div>
+                <h3>Databases</h3>
+                <p>Relational and document storage solutions</p>
+              </div>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+              <span class="skill-pill"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+              <span class="skill-pill"><i class="fa-solid fa-table"></i> SQL Queries</span>
+              <span class="skill-pill"><i class="fa-solid fa-gears"></i> Data Modeling</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Tools & Practices -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-devops"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <div>
+                <h3>Tools & Practices</h3>
+                <p>Developer toolchain, testing, and team collaboration</p>
+              </div>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git</span>
+              <span class="skill-pill"><i class="fa-brands fa-github"></i> GitHub</span>
+              <span class="skill-pill"><i class="fa-solid fa-box-archive"></i> Postman</span>
+              <span class="skill-pill"><i class="fa-solid fa-code"></i> VS Code</span>
+              <span class="skill-pill"><i class="fa-solid fa-code-pull-request"></i> Peer Code Reviews</span>
+              <span class="skill-pill"><i class="fa-solid fa-bug"></i> API Debugging</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proficiency Progress Bars -->
+        <div class="proficiency-section">
+          <h3 class="proficiency-title">Key Core Competencies</h3>
+          <div class="proficiency-grid">
+            <div class="proficiency-item">
+              <div class="proficiency-info">
+                <span>React.js & Next.js UI Engineering</span>
+                <span class="percent">90%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="--level: 90%"></div>
+              </div>
+            </div>
+
+            <div class="proficiency-item">
+              <div class="proficiency-info">
+                <span>JavaScript (ES6+) & Modern Web Standards</span>
+                <span class="percent">88%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="--level: 88%"></div>
+              </div>
+            </div>
+
+            <div class="proficiency-item">
+              <div class="proficiency-info">
+                <span>Tailwind CSS & Responsive Layouts</span>
+                <span class="percent">92%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="--level: 92%"></div>
+              </div>
+            </div>
+
+            <div class="proficiency-item">
+              <div class="proficiency-info">
+                <span>REST API Integration & JWT Authentication</span>
+                <span class="percent">85%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="--level: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Work Experience Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Career History</span>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">Real-world experience delivering software in production environments.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1: Mahir Investment Advisors -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> Apr 2026 – Sept 2026</span>
+                <span class="timeline-badge">Internship &bull; Fintech</span>
+              </div>
+              <h3 class="timeline-role">Software Developer Intern</h3>
+              <h4 class="timeline-company"><i class="fa-solid fa-building"></i> Mahir Investment Advisors Pvt. Ltd. &bull; <span>Fintech</span></h4>
+              <p class="timeline-desc">
+                Contributed to the frontend engineering of a live stock market analysis platform built with Next.js, turning complex market statistics into clean, high-performance UI views.
+              </p>
+              <ul class="timeline-achievements">
+                <li>Built the frontend of a live stock market analysis platform with <strong>Next.js</strong>, focused on responsive, reusable UI components.</li>
+                <li>Integrated frontend interfaces with backend <strong>REST APIs</strong> for real-time market data display and charting.</li>
+                <li>Collaborated with the engineering team through Git-based version control and active peer code reviews.</li>
+                <li>Implemented new user interface features, resolved frontend bugs, and improved overall rendering performance.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">React.js</span>
+                <span class="tag">JavaScript (ES6+)</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Ambe AI Technologies -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> Jan 2025 – Jun 2025</span>
+                <span class="timeline-badge">Internship &bull; AI Tech</span>
+              </div>
+              <h3 class="timeline-role">Full Stack Developer Intern</h3>
+              <h4 class="timeline-company"><i class="fa-solid fa-building"></i> Ambe AI Technologies Pvt. Ltd.</h4>
+              <p class="timeline-desc">
+                Developed responsive web applications with React.js and modern styling, integrating secured APIs and implementing robust client-side state management.
+              </p>
+              <ul class="timeline-achievements">
+                <li>Designed and implemented mobile-first, responsive UIs with <strong>React.js</strong> and modern CSS.</li>
+                <li>Built reusable React components and managed client-side state using the <strong>Context API</strong>.</li>
+                <li>Integrated frontend with secured RESTful APIs using <strong>JWT authentication</strong>.</li>
+                <li>Tested and debugged API integrations using <strong>Postman</strong> to verify seamless frontend-backend functionality.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">Context API</span>
+                <span class="tag">JWT Authentication</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Postman</span>
+                <span class="tag">Node.js</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Projects & Applications</h2>
+          <p class="section-subtitle">Real-world production platforms and full-stack applications I've built.</p>
+        </div>
+
+        <!-- Project Category Filter Buttons -->
+        <div class="project-filters" role="tablist" aria-label="Project Categories">
+          <button class="filter-btn active" data-filter="all" role="tab">All Projects</button>
+          <button class="filter-btn" data-filter="frontend" role="tab">Frontend & Next.js</button>
+          <button class="filter-btn" data-filter="fullstack" role="tab">Full-Stack MERN</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1: Mahir Screener (Fintech) -->
+          <div class="project-card" data-category="frontend">
+            <div class="project-banner banner-gradient-1">
+              <div class="project-banner-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="project-category-badge">Live Production &bull; Fintech</span>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Mahir Screener — Stock Market Analysis Platform</h3>
+                <div class="project-links">
+                  <a href="https://www.mahirscreener.com/" target="_blank" rel="noopener noreferrer" class="link-btn" title="Visit Live Platform" aria-label="Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="project-description">
+                A screener-style stock market analysis platform for browsing, filtering, and comparing stocks with real-time financial metrics and ratios.
+              </p>
+              <ul class="timeline-achievements" style="margin-bottom: 16px;">
+                <li>Built frontend screens for browsing and filtering stocks by financial metrics.</li>
+                <li>Developed reusable UI components for data tables, charts, and stock detail views.</li>
+                <li>Integrated frontend views with backend REST APIs to display real-time and historical market data.</li>
+              </ul>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">JavaScript (ES6+)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: TaskManager App (MERN) -->
+          <div class="project-card" data-category="fullstack">
+            <div class="project-banner banner-gradient-2">
+              <div class="project-banner-icon">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <span class="project-category-badge">Full-Stack &bull; MERN</span>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">TaskManager App — Multi-User MERN Suite</h3>
+                <div class="project-links">
+                  <a href="https://github.com/Gunjan-Vishwakarma/" target="_blank" rel="noopener noreferrer" class="link-btn" title="View Source Code" aria-label="GitHub Repository">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="project-description">
+                A full-stack task management application supporting multi-user authentication, checklist workflows, and admin-driven delegation.
+              </p>
+              <ul class="timeline-achievements" style="margin-bottom: 16px;">
+                <li>Enabled admins to create, assign, and manage tasks with due dates, priorities, and checklists.</li>
+                <li>Automated dynamic task status updates based on checklist completion progress.</li>
+                <li>Added downloadable task reports and secure role-based JWT authentication.</li>
+              </ul>
+              <div class="project-tech-stack">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">JWT Auth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Education Section -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">My academic qualifications in Computer Applications and Software Engineering.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Degree 1: MCA -->
+          <div class="edu-card">
+            <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="edu-content">
+              <div class="edu-period">Aug 2023 – Jun 2025</div>
+              <h3 class="edu-degree">Master of Computer Application (MCA)</h3>
+              <h4 class="edu-institution">G H Raisoni College of Engineering and Management &bull; <span>Nagpur, India</span></h4>
+              <p class="edu-desc">
+                Specialized in Advanced Web Technologies, Software Engineering, Database Systems, Data Structures, Algorithms, and Distributed Application Development.
+              </p>
+              <div class="edu-honors">
+                <span class="honor-badge"><i class="fa-solid fa-check"></i> Post Graduate Degree</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Degree 2: BCCA -->
+          <div class="edu-card">
+            <div class="edu-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="edu-content">
+              <div class="edu-period">Aug 2020 – May 2023</div>
+              <h3 class="edu-degree">Bachelor of Commerce in Computer Application (BCCA)</h3>
+              <h4 class="edu-institution">Tirpude Institute of Management Education &bull; <span>Nagpur, India</span></h4>
+              <p class="edu-desc">
+                Core foundation in Computer Programming, Database Management, Web Fundamentals, Business Logic, and Information Technology Systems.
+              </p>
+              <div class="edu-honors">
+                <span class="honor-badge"><i class="fa-solid fa-check"></i> Graduate Degree</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Certifications Section -->
+    <section class="section certifications-section" id="certifications">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Continuous Learning</span>
+          <h2 class="section-title">Certifications & Credentials</h2>
+          <p class="section-subtitle">Industry certifications validating technical expertise.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Cert 1: MERN Stack -->
+          <div class="edu-card">
+            <div class="edu-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="edu-content">
+              <div class="edu-period">Webgurukul</div>
+              <h3 class="edu-degree">MERN Stack Certification</h3>
+              <h4 class="edu-institution">Webgurukul &bull; <span>Full-Stack Web Development</span></h4>
+              <p class="edu-desc">
+                Comprehensive training covering MongoDB, Express.js, React.js, and Node.js for architecting end-to-end full stack web applications.
+              </p>
+              <div class="edu-honors">
+                <a href="https://drive.google.com/file/d/10bRa271IQ1qo8SKNDfVY1heBF8WHvbdA/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="honor-badge" style="text-decoration: underline;">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 2: HTML & CSS -->
+          <div class="edu-card">
+            <div class="edu-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="edu-content">
+              <div class="edu-period">Sololearn</div>
+              <h3 class="edu-degree">HTML & CSS Certification</h3>
+              <h4 class="edu-institution">Sololearn &bull; <span>Frontend Fundamentals</span></h4>
+              <p class="edu-desc">
+                Core grounding in semantic HTML5 markup, CSS3 styling, responsive page structures, and cross-browser styling techniques.
+              </p>
+              <div class="edu-honors">
+                <span class="honor-badge"><i class="fa-solid fa-check"></i> Certified Credential</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Connect & Collaborate</h2>
+          <p class="section-subtitle">I'm currently seeking an entry-level Frontend Engineer or Software Developer role. Let's talk!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details & Info Cards -->
+          <div class="contact-info-card">
+            <h3 class="contact-info-title">Contact Information</h3>
+            <p class="contact-info-desc">
+              Feel free to reach out directly via email, phone, or LinkedIn. I am based in Pune and open to both on-site and remote opportunities.
+            </p>
+
+            <div class="info-items-list">
+              <!-- Email Card with Copy Button -->
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div class="info-text">
+                  <span class="info-label">Email Address</span>
+                  <a href="mailto:gunjanvishwakarma418@gmail.com" class="info-value" id="email-address-text">gunjanvishwakarma418@gmail.com</a>
+                </div>
+                <button class="copy-btn" id="copy-email-btn" title="Copy Email to Clipboard" aria-label="Copy Email">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- Phone -->
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="info-text">
+                  <span class="info-label">Phone / Mobile</span>
+                  <a href="tel:+918788446929" class="info-value">+91 8788446929</a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-text">
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Pune, India (Open to Relocation / Remote)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links in Contact Box -->
+            <div class="contact-socials-box">
+              <span class="socials-box-title">Follow & Connect</span>
+              <div class="socials-box-links">
+                <a href="https://github.com/Gunjan-Vishwakarma/" target="_blank" rel="noopener noreferrer" class="social-box-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gunjan-vishwakarma09/" target="_blank" rel="noopener noreferrer" class="social-box-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:gunjanvishwakarma418@gmail.com" class="social-box-icon" aria-label="Email Gunjan"><i class="fa-regular fa-envelope"></i></a>
+                <a href="tel:+918788446929" class="social-box-icon" aria-label="Call Gunjan"><i class="fa-solid fa-phone"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-card">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label">Your Name <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required />
+                  </div>
+                  <span class="form-error-msg" id="name-error">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com" required />
+                  </div>
+                  <span class="form-error-msg" id="email-error">Please enter a valid email address</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-bookmark input-icon"></i>
+                  <input type="text" id="subject" name="subject" class="form-input" placeholder="e.g. Frontend Developer Opportunity" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message <span class="required">*</span></label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fa-regular fa-comment-dots input-icon textarea-icon"></i>
+                  <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Hi Gunjan, I'd like to discuss an opportunity..." required></textarea>
+                </div>
+                <span class="form-error-msg" id="message-error">Please write a brief message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block submit-btn" id="submit-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+              <div class="form-success-banner" id="form-success-banner" role="alert">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Message Sent Successfully!</strong>
+                  <p>Thank you for reaching out. I'll get back to you promptly.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <span class="logo-badge">&lt;GV/&gt;</span>
+            <span class="logo-text">Gunjan<strong>.dev</strong></span>
+          </a>
+          <p class="footer-tagline">Building responsive user interfaces with React.js, Next.js, and clean code.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <ul class="footer-nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="current-year"></span> Gunjan Vishwakarma. All rights reserved.
+        </p>
+
+        <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to Top" title="Back to Top">
+          <span>Back to Top</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Alert -->
+  <div class="toast-notification" id="toast-notification" role="status" aria-live="polite">
+    <i class="fa-solid fa-check-circle toast-icon"></i>
+    <span class="toast-message" id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript Bundle -->
+  <script src="script.js"></script>
+</body>
+</html>
