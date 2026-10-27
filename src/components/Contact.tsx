@@ -58,7 +58,7 @@ export default function Contact() {
             Let&apos;s Connect & Collaborate
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            I am actively seeking an entry-level Frontend Engineer or Software Developer role. Feel free to reach out!
+            I have completed my internship and am actively seeking full-time Software Developer & Frontend Engineer roles. Immediate joiner — let&apos;s talk!
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function Contact() {
                 Contact Information
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
-                Feel free to contact me directly via email, phone, or LinkedIn. I am based in Pune and open to on-site, hybrid, or remote positions.
+                Feel free to reach out directly via email, phone, or LinkedIn. I am based in Pune, open to relocation across India, and available for on-site, hybrid, or remote positions.
               </p>
 
               {/* Info Items */}
@@ -133,7 +133,7 @@ export default function Contact() {
                       Location
                     </p>
                     <p className="text-xs sm:text-sm font-semibold text-white">
-                      Pune, India &bull; Open to Relocation / Remote
+                      Pune, India &bull; Immediate Joiner (Open to Relocation / Remote)
                     </p>
                   </div>
                 </div>

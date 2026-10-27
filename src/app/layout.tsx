@@ -21,25 +21,27 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Gunjan Vishwakarma | Software Developer & Frontend Engineer",
+  title: "Gunjan Vishwakarma | Software Developer & Frontend Engineer — Open for Full-Time Roles",
   description:
-    "Portfolio of Gunjan Vishwakarma — Software Developer specializing in React.js, Next.js, modern JavaScript, Tailwind CSS, and scalable REST API integrations.",
+    "Portfolio of Gunjan Vishwakarma — Software Developer specializing in React.js, Next.js, MERN stack, Tailwind CSS, and scalable REST API integrations. Successfully completed production internships and actively seeking full-time Software Developer / Frontend Engineer opportunities.",
   keywords: [
     "Gunjan Vishwakarma",
     "Software Developer",
     "Frontend Engineer",
+    "Full Stack Developer",
     "Next.js",
     "React.js",
     "TypeScript",
+    "MERN",
     "Tailwind CSS",
     "Portfolio",
     "Pune",
   ],
   authors: [{ name: "Gunjan Vishwakarma" }],
   openGraph: {
-    title: "Gunjan Vishwakarma | Software Developer Portfolio",
+    title: "Gunjan Vishwakarma | Software Developer & Frontend Engineer",
     description:
-      "Explore projects, skills, real-world fintech experience, and education of Gunjan Vishwakarma.",
+      "Explore projects, skills, production fintech experience, and full-time availability of Gunjan Vishwakarma.",
     url: "https://github.com/Gunjan-Vishwakarma/",
     siteName: "Gunjan Vishwakarma Portfolio",
     type: "website",

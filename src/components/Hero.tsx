@@ -61,7 +61,7 @@ export default function Hero() {
           {/* Status Pill */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold backdrop-blur-md shadow-sm shadow-emerald-500/10">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Open for Frontend & Software Developer Roles</span>
+            <span>Available Immediately • Open for Full-Time Roles</span>
           </div>
 
           {/* Heading */}
@@ -84,11 +84,10 @@ export default function Hero() {
 
           {/* Description */}
           <p className="text-slate-300/90 text-sm sm:text-base leading-relaxed max-w-xl font-normal">
-            Software Developer with hands-on experience building responsive,
-            production user interfaces with <strong className="text-white font-medium">React.js</strong> and{" "}
-            <strong className="text-white font-medium">Next.js</strong>. Currently developing frontend
-            features for a live stock market analysis platform (Fintech), integrating REST APIs,
-            and crafting high-performance, modular UI systems.
+            Software Developer with hands-on production experience building high-performance web applications with{" "}
+            <strong className="text-white font-medium">React.js</strong>,{" "}
+            <strong className="text-white font-medium">Next.js</strong>, and the{" "}
+            <strong className="text-white font-medium">MERN stack</strong>. Having successfully completed my Software Developer internship delivering live stock market platform features, I am actively seeking full-time Software Developer / Frontend Engineer opportunities.
           </p>
 
           {/* CTA Buttons */}
@@ -202,7 +201,7 @@ export default function Hero() {
               </div>
               <div>
                 <p className="text-xs font-bold text-white leading-tight">Pune, India</p>
-                <p className="text-[9px] text-emerald-400">Available to Join</p>
+                <p className="text-[9px] text-emerald-400">Immediate Joiner</p>
               </div>
             </div>
           </div>
