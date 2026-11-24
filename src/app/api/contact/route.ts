@@ -244,7 +244,7 @@ export async function POST(req: NextRequest) {
 
     // Step G: Send Email via Resend
     const resend = new Resend(apiKey);
-    const toEmail = process.env.CONTACT_TO_EMAIL || "gunjanvishwakarma418@gmail.com";
+    const toEmail = process.env.CONTACT_TO_EMAIL || "gunjanworkmail90@gmail.com";
     const fromEmail = process.env.CONTACT_FROM_EMAIL || "Portfolio Contact <onboarding@resend.dev>";
     const emailSubject = cleanSubject
       ? `[Portfolio Contact] ${cleanSubject}`
