@@ -1,46 +1,74 @@
-# 🚀 Gunjan Vishwakarma — Software Developer Portfolio
+# 🚀 Gunjan Vishwakarma — Next.js Developer Portfolio
 
-Personal developer portfolio for **Gunjan Vishwakarma**, built with **HTML5, Vanilla CSS, and modern JavaScript**.
-
----
-
-## 👤 Profile Summary
-- **Name**: Gunjan Vishwakarma
-- **Role**: Software Developer / Frontend Engineer
-- **Location**: Pune, India
-- **Contact**: [+91 8788446929](tel:+918788446929) &bull; [gunjanvishwakarma418@gmail.com](mailto:gunjanvishwakarma418@gmail.com)
-- **Profiles**: [LinkedIn](https://www.linkedin.com/in/gunjan-vishwakarma09/) | [GitHub](https://github.com/Gunjan-Vishwakarma/)
+Modern, high-performance developer portfolio for **Gunjan Vishwakarma**, built with **Next.js 14 (App Router), TypeScript, Tailwind CSS, Lucide Icons, and Framer Motion**.
 
 ---
 
-## 📂 File Structure
+## 🛠️ Tech Stack & Highlights
+
+- **Framework**: Next.js 14 (App Router & Server/Client Components)
+- **Styling**: Tailwind CSS & Glassmorphism Design System
+- **Icons**: Lucide React
+- **Language**: TypeScript
+- **Fonts**: Google Fonts (`Inter`, `Plus Jakarta Sans`, `Fira Code`) via `next/font`
+
+---
+
+## 📁 Architecture & File Structure
 
 ```
 frontend/
-├── index.html        ← All sections with Gunjan's real resume data
-├── style.css         ← Responsive styling, animations & dark/light theme
-├── script.js         ← Typewriter effect, theme switcher, filters & validation
-├── README.md         ← Documentation
-└── assets/           ← Optional images or resume PDF files
+├── package.json
+├── tsconfig.json
+├── next.config.mjs
+├── tailwind.config.ts
+├── postcss.config.mjs
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx         ← Google fonts, root HTML, SEO & OpenGraph meta
+│   │   ├── page.tsx           ← Home page assembling all portfolio sections
+│   │   └── globals.css        ← Glass utilities, aurora gradients & tailwind
+│   └── components/
+│       ├── BackgroundOrbs.tsx ← Animated aurora ambient lighting
+│       ├── Navbar.tsx         ← Sticky glass header with mobile drawer
+│       ├── Hero.tsx           ← Dynamic typewriter, badges & CTAs
+│       ├── About.tsx          ← Narrative story, pillars & stats
+│       ├── Skills.tsx         ← Categorized stack & proficiency bars
+│       ├── Experience.tsx     ← Timeline of Fintech & AI internships
+│       ├── Projects.tsx       ← Filterable projects (Mahir Screener & TaskManager)
+│       ├── Education.tsx      ← MCA & BCCA degrees
+│       ├── Certifications.tsx ← Webgurukul MERN & Sololearn certifications
+│       ├── Contact.tsx        ← Interactive form & 1-click copy email
+│       └── Footer.tsx         ← Quick links & smooth scroll-to-top
 ```
 
 ---
 
-## 🌟 Sections Included
+## ⚡ How to Run Locally
 
-1. **Hero Section**: Animated typewriter (`React.js & Next.js Web Apps`, `Fintech & Stock Market Platforms`, etc.), direct contact CTAs, and active status pill.
-2. **About Me**: Narrative bio, key features (Component architecture, API integration, Responsive design), and interactive stats.
-3. **Core Skills**: Categorized pills for Frontend, API Integration & Backend, Databases, and Tools & Practices with animated skill level bars.
-4. **Work Experience**:
-   - **Mahir Investment Advisors Pvt. Ltd. (Fintech)** — Software Developer Intern (Apr 2026 – Sept 2026)
-   - **Ambe AI Technologies Pvt. Ltd.** — Full Stack Developer Intern (Jan 2025 – Jun 2025)
-5. **Projects**:
-   - **Mahir Screener — Stock Market Analysis Platform** (Live link: [mahirscreener.com](https://www.mahirscreener.com/))
-   - **TaskManager App — MERN Stack** ([GitHub repo link](https://github.com/Gunjan-Vishwakarma/))
-6. **Education**:
-   - **MCA** — G H Raisoni College of Engineering and Management (2023–2025)
-   - **BCCA** — Tirpude Institute of Management Education (2020–2023)
-7. **Certifications**:
-   - **MERN Stack Certification** — Webgurukul ([Certificate Link](https://drive.google.com/file/d/10bRa271IQ1qo8SKNDfVY1heBF8WHvbdA/view?usp=drive_link))
-   - **HTML & CSS Certification** — Sololearn
-8. **Contact & Socials**: Interactive form, one-click copy email button, phone link, LinkedIn, and GitHub.
+1. Open your terminal in the `frontend` directory:
+   ```bash
+   cd frontend
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 🚢 Production Build & Deploy
+
+- **Create a production build**:
+  ```bash
+  npm run build
+  ```
+- **Start production server**:
+  ```bash
+  npm run start
+  ```
+- **Deploy to Vercel**:
+  1. Push code to GitHub.
+  2. Import your repository into [Vercel](https://vercel.com).
+  3. Deploy with zero configuration!

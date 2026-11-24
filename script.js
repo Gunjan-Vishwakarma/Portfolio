@@ -14,20 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('theme-toggle');
   const body = document.body;
 
-  // Check saved preference or system preference
+  // Check saved preference (default to dark)
   const savedTheme = localStorage.getItem('portfolio-theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   if (savedTheme) {
     body.setAttribute('data-theme', savedTheme);
-  } else if (prefersDark) {
+  } else {
     body.setAttribute('data-theme', 'dark');
   }
 
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = body.getAttribute('data-theme') || 'light';
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      const currentTheme = body.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       body.setAttribute('data-theme', newTheme);
       localStorage.setItem('portfolio-theme', newTheme);
       showToast(`Switched to ${newTheme} mode`);
