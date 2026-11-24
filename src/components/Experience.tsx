@@ -10,12 +10,13 @@ export default function Experience() {
       company: "Mahir Investment Advisors Pvt. Ltd.",
       type: "Fintech",
       period: "Apr 2026 – Sept 2026",
-      desc: "Building the frontend of a live stock market analysis platform with Next.js, focused on responsive, reusable UI components and real-time data streaming.",
+      status: "Completed",
+      desc: "Engineered the frontend architecture and user interface for a live stock market analysis platform built with Next.js, turning complex financial metrics into clean, high-performance UI views.",
       achievements: [
-        "Building the frontend of a live stock market analysis platform with Next.js, focused on responsive, reusable UI components.",
-        "Integrating frontend interfaces with backend REST APIs for real-time market data display and charting.",
-        "Collaborating with the engineering team through Git-based version control and active peer code reviews.",
-        "Implementing new UI features, fixing bugs, and improving frontend rendering performance.",
+        "Built core modules of a live stock market analysis platform with Next.js, focused on responsive, reusable UI components.",
+        "Integrated frontend interfaces with backend REST APIs for real-time market data streaming and interactive charting.",
+        "Collaborated with the engineering team through Git-based version control and active peer code reviews.",
+        "Implemented new UI features, resolved edge-case production bugs, and improved overall rendering performance.",
       ],
       tags: ["Next.js", "React.js", "JavaScript (ES6+)", "REST APIs", "Tailwind CSS", "Git"],
     },
@@ -24,6 +25,7 @@ export default function Experience() {
       company: "Ambe AI Technologies Pvt. Ltd.",
       type: "AI Tech",
       period: "Jan 2025 – Jun 2025",
+      status: "Completed",
       desc: "Designed and implemented mobile-first responsive web applications with React.js, secured endpoints with JWT authentication, and validated APIs with Postman.",
       achievements: [
         "Designed and implemented mobile-first, responsive UIs with React.js and modern CSS.",
@@ -67,9 +69,15 @@ export default function Experience() {
                     <Calendar className="w-4 h-4" />
                     {exp.period}
                   </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-500/15 border border-indigo-500/30 text-indigo-300">
-                    {exp.type}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center gap-1">
+                      <CheckCircle className="w-3 h-3" />
+                      {exp.status}
+                    </span>
+                    <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-500/15 border border-indigo-500/30 text-indigo-300">
+                      {exp.type}
+                    </span>
+                  </div>
                 </div>
 
                 <h3 className="font-heading text-xl sm:text-2xl font-bold text-white mb-1.5">

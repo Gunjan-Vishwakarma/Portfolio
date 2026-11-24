@@ -5,7 +5,7 @@ import { Layers, ShieldCheck, Smartphone, Sparkles, TrendingUp, CheckCircle2 } f
 
 export default function About() {
   const stats = [
-    { number: "2+", label: "Internship Roles", note: "Fintech & AI Technologies" },
+    { number: "2", label: "Completed Internships", note: "Fintech & AI Technologies" },
     { number: "100%", label: "Responsive Layouts", note: "Mobile-first & Accessible" },
     { number: "10+", label: "Core Proficiencies", note: "React, Next.js, Node, SQL" },
     { number: "1", label: "Live Fintech App", note: "Mahir Screener in Production" },
@@ -24,7 +24,7 @@ export default function About() {
             Passionate About Creating High-Impact Web Apps
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            Bridging user-centric design with performant, production-ready frontend engineering.
+            Bridging user-centric design with performant, production-ready software engineering.
           </p>
         </div>
 
@@ -34,23 +34,24 @@ export default function About() {
           <div className="lg:col-span-8 glass-panel p-8 sm:p-10 rounded-3xl flex flex-col justify-between relative overflow-hidden">
             <div className="relative z-10">
               <h3 className="font-heading text-xl sm:text-2xl font-bold text-white mb-5 leading-snug">
-                Frontend-focused Software Developer with hands-on production experience.
+                Software Developer with hands-on production experience & proven impact.
               </h3>
               <p className="text-slate-300 text-base leading-relaxed mb-4">
                 I am a Software Developer based in <strong className="text-white">Pune, India</strong> with
                 practical experience in building responsive, production user interfaces using{" "}
-                <strong className="text-cyan-400">React.js</strong> and{" "}
-                <strong className="text-cyan-400">Next.js</strong>.
+                <strong className="text-cyan-400">React.js</strong>,{" "}
+                <strong className="text-cyan-400">Next.js</strong>, and the{" "}
+                <strong className="text-cyan-400">MERN stack</strong>.
               </p>
               <p className="text-slate-300 text-base leading-relaxed mb-4">
-                Currently contributing to the frontend of <strong className="text-white">Mahir Screener</strong>, a
-                live stock market analysis platform (Fintech). I translate financial metrics and ratios
-                into responsive, reusable UI components, data tables, and dynamic charts integrated with backend REST APIs.
+                Having recently completed my Software Developer internship at <strong className="text-white">Mahir Investment Advisors</strong>, I engineered frontend modules for <strong className="text-white">Mahir Screener</strong>, a
+                live stock market analysis platform (Fintech). I translated complex financial metrics and ratios
+                into responsive, reusable UI components, high-density data tables, and dynamic charts integrated with backend REST APIs.
               </p>
               <p className="text-slate-300 text-base leading-relaxed mb-8">
                 With a strong grounding in modern JavaScript (ES6+), Tailwind CSS, state management via the Context API,
-                and Git-based team collaboration, I hold an <strong className="text-white">MCA degree</strong> and am eager
-                to contribute to high-performing software engineering teams.
+                and Git-based team collaboration, I hold an <strong className="text-white">MCA degree</strong> and am an <strong className="text-emerald-400 font-semibold">immediate joiner</strong> eager
+                to contribute to high-performing software engineering teams in full-time roles.
               </p>
 
               {/* Pillars */}

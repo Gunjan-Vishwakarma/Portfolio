@@ -22,9 +22,9 @@ export default function Projects() {
       period: "Apr 2026 – Sept 2026",
       desc: "A screener-style stock market analysis platform for browsing, filtering, and comparing stocks with real-time financial metrics and ratios.",
       points: [
-        "Building frontend screens for browsing and filtering stocks by financial metrics.",
-        "Developing reusable UI components for data tables, charts, and stock detail views.",
-        "Integrating frontend views with backend REST APIs to display real-time and historical market data.",
+        "Architected responsive frontend screens for browsing, searching, and filtering stocks by financial metrics.",
+        "Developed modular, reusable UI components for data tables, charts, and stock detail views.",
+        "Integrated frontend views with backend REST APIs to display real-time and historical market data.",
       ],
       tags: ["Next.js", "React.js", "REST APIs", "Tailwind CSS", "JavaScript (ES6+)"],
       icon: <LineChart className="w-10 h-10 text-cyan-300" />,

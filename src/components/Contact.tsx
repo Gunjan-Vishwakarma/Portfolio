@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Mail,
   Phone,
@@ -13,12 +13,16 @@ import {
   Sparkles,
   Loader2,
   CheckCircle2,
+  AlertCircle,
 } from "lucide-react";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
+  const [mountedAt, setMountedAt] = useState<number>(Date.now());
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,23 +30,75 @@ export default function Contact() {
     message: "",
   });
 
+  useEffect(() => {
+    setMountedAt(Date.now());
+  }, []);
+
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("gunjanvishwakarma418@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 3000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (
+    field: "name" | "email" | "subject" | "message",
+    value: string
+  ) => {
+    if (error) setError(null);
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
+    setError(null);
+
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const subject = formData.subject.trim();
+    const message = formData.message.trim();
+
+    if (!name || !email || !message) {
+      setError("Please fill out all required fields.");
+      return;
+    }
 
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          message,
+          _gotcha: honeypot,
+          _timestamp: mountedAt,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message. Please try again.");
+      }
+
       setSuccess(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setSuccess(false), 6000);
-    }, 1200);
+      setHoneypot("");
+      setTimeout(() => setSuccess(false), 8000);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("An unexpected error occurred. Please try again.");
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -58,7 +114,7 @@ export default function Contact() {
             Let&apos;s Connect & Collaborate
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            I am actively seeking an entry-level Frontend Engineer or Software Developer role. Feel free to reach out!
+            I have completed my internship and am actively seeking full-time Software Developer & Frontend Engineer roles. Immediate joiner — let&apos;s talk!
           </p>
         </div>
 
@@ -71,7 +127,7 @@ export default function Contact() {
                 Contact Information
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
-                Feel free to contact me directly via email, phone, or LinkedIn. I am based in Pune and open to on-site, hybrid, or remote positions.
+                Feel free to reach out directly via email, phone, or LinkedIn. I am based in Pune, open to relocation across India, and available for on-site, hybrid, or remote positions.
               </p>
 
               {/* Info Items */}
@@ -133,7 +189,7 @@ export default function Contact() {
                       Location
                     </p>
                     <p className="text-xs sm:text-sm font-semibold text-white">
-                      Pune, India &bull; Open to Relocation / Remote
+                      Pune, India &bull; Immediate Joiner (Open to Relocation / Remote)
                     </p>
                   </div>
                 </div>
@@ -185,6 +241,32 @@ export default function Contact() {
           {/* Right: Contact Form */}
           <div className="lg:col-span-7 glass-panel p-8 sm:p-10 rounded-3xl">
             <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Bot Protection Honeypot field (hidden from real users, caught by spam bots) */}
+              <div
+                aria-hidden="true"
+                style={{
+                  opacity: 0,
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  height: 0,
+                  width: 0,
+                  zIndex: -1,
+                  pointerEvents: "none",
+                }}
+              >
+                <label htmlFor="_gotcha">Do not fill this field</label>
+                <input
+                  type="text"
+                  id="_gotcha"
+                  name="_gotcha"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                />
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="name" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
@@ -195,7 +277,7 @@ export default function Contact() {
                     id="name"
                     required
                     value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="e.g. John Doe"
                     className="w-full px-4 py-3 rounded-xl glass-input text-sm"
                   />
@@ -210,7 +292,7 @@ export default function Contact() {
                     id="email"
                     required
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="e.g. john@example.com"
                     className="w-full px-4 py-3 rounded-xl glass-input text-sm"
                   />
@@ -225,7 +307,7 @@ export default function Contact() {
                   type="text"
                   id="subject"
                   value={formData.subject}
-                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                  onChange={(e) => handleInputChange("subject", e.target.value)}
                   placeholder="e.g. Frontend Developer Role / Project Collaboration"
                   className="w-full px-4 py-3 rounded-xl glass-input text-sm"
                 />
@@ -240,7 +322,7 @@ export default function Contact() {
                   required
                   rows={5}
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) => handleInputChange("message", e.target.value)}
                   placeholder="Hi Gunjan, I saw your portfolio and would like to connect regarding..."
                   className="w-full px-4 py-3 rounded-xl glass-input text-sm resize-y"
                 />
@@ -264,9 +346,21 @@ export default function Contact() {
                 )}
               </button>
 
+              {/* Error Alert */}
+              {error && (
+                <div className="p-4 rounded-xl bg-rose-500/15 border border-rose-500/40 text-rose-300 flex items-start gap-3 text-sm animate-fade-in">
+                  <AlertCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="block font-semibold">Message Not Sent</strong>
+                    <span>{error}</span>
+                  </div>
+                </div>
+              )}
+
+              {/* Success Alert */}
               {success && (
-                <div className="p-4 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 flex items-center gap-3 text-sm animate-fade-in">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                <div className="p-4 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 flex items-start gap-3 text-sm animate-fade-in">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
                     <strong className="block font-semibold">Message Sent Successfully!</strong>
                     <span>Thank you for reaching out. I will get back to you promptly.</span>
